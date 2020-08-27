@@ -14,10 +14,25 @@
   padding:0 16px;
 }
 
-header, main, footer { padding-left: 300px; }
+header, main, footer { padding-right: 300px; }
 
-@media only screen and (max-width : 992px) { 
- header, main, footer { padding-left: 0; }
+@media only screen and (min-width : 900px) { 
+
+#slide-out{
+ left:auto;
+right:0 ;
+transform: translateX(0) 
+}
+
+.fixed-action-btn {right:326px}
+
+
+}
+
+@media only screen and (max-width : 900px) {
+
+
+ header, main, footer { padding-right: 0; }
 }
 </style>
 
@@ -29,15 +44,17 @@ header, main, footer { padding-left: 300px; }
 
 <nav>
   <div class="nav-wrapper blue-grey darken-4">
+
 <a href="#" class="brand-logo left">Savron India</a>
 
-<a href="#" data-target="slide-out" class="sidenav-trigger right">
+<a href="#" data-target="slide-out" class="show-on-medium-and-up sidenav-trigger right">
 <i class="material-icons">menu</i></a>
+ 
   </div>
 </nav>
 
 
-<ul id="slide-out" class="sidenav sidenav-fixed">
+<ul id="slide-out" class="sidenav" style="">
 <li>
 <div class="user-view">
 <div class="background">
