@@ -7,32 +7,46 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 
 <style type="text/css">
+body {font-family: 'Roboto', sans-serif;
+ background-color:#263238;
+ color:#f5f5f5}
+
+.nav-wrapper {background:#455A64}
+
+img {width:100%; max-width:100%}
+
+ {display: inline-block;
+max-width:800px;
+column-count:4;
+column-width:25%;
+column-gap:1px}
+
+
+
 
 .sidenav li > a {
   padding:0 16px;
 }
 
-header, main, footer { padding-right: 300px; }
+header, main, footer { padding-left: 300px; }
 
-@media only screen and (min-width : 600px) { 
+@media only screen and (min-width : 992px) { 
 
-#slide-out{
- left:auto;
-right:0 ;
-transform: translateX(0) 
-}
+
 
 .fixed-action-btn {right:326px}
 
 
 }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 992px) {
 
 
- header, main, footer { padding-right: 0; }
+ header, main, footer { padding-left: 0; }
 }
 </style>
 
@@ -40,21 +54,21 @@ transform: translateX(0)
 
 
 
+<header>
 
+<nav><div class="nav-wrapper">
 
-<nav>
-  <div class="nav-wrapper blue-grey darken-4">
+ <a href="#" class="left sidenav-trigger "><i class="material-icons">invert_colors</i></a>
 
-<a href="#" class="brand-logo left">Savron India</a>
+ <a href="#" class="brand-logo center" style="font-weight:700">SAVRON</a>
 
-<a href="#" data-target="slide-out" class="show-on-medium-and-up sidenav-trigger right">
-<i class="material-icons">menu</i></a>
- 
-  </div>
-</nav>
+ <a href="#" data-target="slide-out" class="show-on-large sidenav-trigger right"><i class="material-icons">dashboard</i></a>
 
+</div></nav>
 
-<ul id="slide-out" class="sidenav" style="">
+</header>
+
+<ul id="slide-out" class="sidenav">
 <li>
 <div class="user-view">
 <div class="background">
@@ -134,9 +148,10 @@ transform: translateX(0)
 
 <li><div class="divider"></div></li>
 
-
 <li>
-<a class="subheader">Subheader</a></li>
+<a class="subheader">Legal Stuff</a></li>
+
+<li><a href="#rexAttribution" class="modal-trigger waves-effect"><i class="material-icons">groups</i>Attribution Links</a></li>
 
 <li>
 <a class="waves-effect" href="#!">Third Link With Waves</a></li>
@@ -162,108 +177,87 @@ transform: translateX(0)
 
 <main>
 
-
+<!-- All Modals -->
 
 <div id="modal1" class="modal">
   <div class="modal-content">
-
 <form action="#">
-
 <div class="input-field">
 <input id="username" type="text" placeholder="Login Id or Mobile Number" class="validate">
 <label for="username">Username</label>
 </div>
-
 <div class="input-field">
 <input id="password" type="password" placeholder="Password" class="validate">
 <label for="password">Password</label>
 </div>
-
 <p><label for="consent">
 <input type="checkbox" id="consent" class="filled-in" />
 <span>I Agree to Partner Terms and Conditions of Savron India Ltd.</span>
 </label></p>
-
-
-
 <p class="center-align">
 <button class="btn waves-effect" type="submit" name="action">Submit <i class="material-icons right">send</i></button>
 </p>
-
 <br>
 <a href="#!" class="left">Forgot Password</a>
 <a href="#!" class="right">Active Account</a>
 <br>
-
 </form>
-
   </div>
 </div>
 
 
+<div id="rexAttribution" class="modal">
+<div class="modal-content">
+<a href="https://www.flaticon.com/packs/global-business-34" target="_blank" rel="noopener noreferrer">Global Business Icon Pack</a>
+<br><a href="https://www.jaybabani.com/zak-html/app/ui-pages-home.html" target="_blank" rel="noopener noreferrer">Zak Material Design</a>
+</div></div>
 
+<!-- All Modals Complete -->
 
-
-
-
-<br><br><br><br>
-
-
-<div class="row">
-
-<div class="col s12">
-<ul class="tabs">
-<li class="tab col s3">
-<a href="#test1">Test 1</a></li>
-
-<li class="tab col s3"><a class="active" href="#test2">Test 2</a></li>
-
-<li class="tab col s3"><a href="#test3">Test 4</a></li>
-
-<li class="tab col s3"><a href="#test4">Test 4</a></li>
-</ul>
-</div>
-
-<div id="test1" class="col s12">Test 1</div>
-
-<div id="test2" class="col s12">Test 2</div>
-
-<div id="test3" class="col s12">Test 3</div>
-
-<div id="test4" class="col s12">Test 4</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Fixed Floating Action Button -->
 
 <div class="fixed-action-btn click-to-toggle">
 
-<a class="btn-floating btn-large red">
-<i class="large material-icons">mode_edit</i>
+<a class="btn-floating btn-large teal">
+<i class="large material-icons">add</i>
 </a>
 
 <ul>
-<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+<li><a class="btn-floating teal"><i class="material-icons">insert_chart</i></a></li>
 
 <li><a class="btn-floating pulse yellow darken-1"><i class="material-icons">format_quote</i></a></li>
 
 <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
 
 <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li> </ul> </div>
+
+<!-- Fixed Floating Action Button Complete -->
+
+
+
+
+
+
+<div class="row" id="bankingCards"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -278,8 +272,7 @@ transform: translateX(0)
 
 var elems = document.querySelectorAll('.sidenav');
 
-var instances = M.Sidenav.init(elems, 
-{ edge: 'right' } );
+var instances = M.Sidenav.init(elems);
 
 
 var elems = document.querySelectorAll('.collapsible');
@@ -326,6 +319,38 @@ var elems = document.querySelectorAll('.materialboxed');
 
 var elems = document.querySelectorAll('.tooltipped');
 var instances = M.Tooltip.init(elems); 
+
+
+var bankingCards = document.getElementById("bankingCards")
+
+let myHtm ="";
+
+for (let i=0; i<8; i++){
+
+myHtm +=`
+
+<div class="col s12 m6 l4 xl3">
+<div class="card-panel" style="background:#37474F; padding:0">
+
+<div class="valign-wrapper">
+<div class="col s3">
+<p><img src="https://image.flaticon.com/icons/svg/3347/3347571.svg" style="padding-left:9px"></p>
+</div>
+
+<div class="col s9">
+<p style="font-weight:700;  font-size:1.2rem;">
+${i} 
+GST Suvidha Kendra and Registration Centre</p>
+</div>
+</div>
+
+</div>
+</div>
+
+`;
+}
+
+bankingCards.innerHTML = myHtm;
 
 
 
